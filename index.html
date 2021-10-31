@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Para Naomi</title>
+<link rel="shotcut icon" href="imagenes/ñaaa.gif" >
+<meta charset="UTF-8">
+<link class="hoa" rel="stylesheet" href="estilo.css">
+
+</head>
+<style> 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.contenedor {
+    margin: auto;
+    width: 900px;
+    margin-top: 300px;
+    text-align: center;
+}
+.titulo{    
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.opciones p {
+    background: #ffa02a;
+    display: initial;
+    padding: 12px;
+    color: #ffffff;
+    border-radius: 2px;
+    font-weight: bold;
+}
+p.p1 {
+    position: absolute;
+    top: 500px;
+    left: 609px;
+    width: 100px;
+}
+p.p2{
+    position: absolute;
+    top: 500px;
+    left: 800px;
+    width: 100px;
+}
+#si {
+    background: url(imagenes/yaaaa.png);
+    left: 400px;position: absolute;
+    top: 100px;
+    width: 550px;
+    color: #ffffff;
+    padding: 50px;
+    display: none;
+}
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".p1").hover(function(){
+  	arriba =  Math.random() * (400 - 1) + 1;
+  	abajo =  Math.random() * (609 - 1) + 1;
+    $(this).css("top", arriba);
+    $(this).css("left", abajo);
+    });
+});
+function dijoSi(){
+	document.getElementById("si").style.display = "block";
+}
+</script>
+<body>
+    <h3> reproduceme<h3>
+        <audio src="musica/haruu.mp3" controls="controls" type="audio/mp3"  autoplay="true"> Musica 1</audio><br>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1 >¿ NAOMI QUISIERAS ESTAR EL RESTO DE MI VIDA CONMIGO ?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+            <div id="si">	
+                  
+                    <h2>AAAAAAAAAAAAAAAAAAA ME DIJO QUE SI XDXD uwu</h2>
+                    <img src="imagenes/icon.gif" height="50">
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
